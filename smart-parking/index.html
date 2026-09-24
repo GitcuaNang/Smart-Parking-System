@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Bãi xe thông minh</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     SIDEBAR
+========================= -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            🚗
+        </div>
+
+        <div>
+            <strong>Bãi xe</strong>
+            <span>thông minh</span>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a class="menu-item active"
+           data-page="dashboard">
+
+            <span>🏠</span>
+            <span>Tổng quan</span>
+
+        </a>
+
+
+        <a class="menu-item"
+           data-page="vehicles">
+
+            <span>🚗</span>
+            <span>Xe trong bãi</span>
+
+        </a>
+
+
+        <a class="menu-item"
+           data-page="history">
+
+            <span>📋</span>
+            <span>Lịch sử & thống kê</span>
+
+        </a>
+
+    </nav>
+
+</aside>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main class="main">
+
+
+    <!-- =====================
+         TRANG TỔNG QUAN
+    ====================== -->
+
+    <section id="dashboard"
+             class="page active-page">
+
+        <div class="page-header">
+
+            <div>
+
+                <h1>Tổng quan</h1>
+
+                <p>
+                    Theo dõi tình trạng bãi xe
+                    theo thời gian thực
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- THỐNG KÊ -->
+
+        <section class="statistics">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🚗
+                </div>
+
+                <div>
+
+                    <span>
+                        Tổng vị trí
+                    </span>
+
+                    <strong id="total">
+                        4
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🔴
+                </div>
+
+                <div>
+
+                    <span>
+                        Đang đỗ
+                    </span>
+
+                    <strong id="occupied">
+                        2
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🟢
+                </div>
+
+                <div>
+
+                    <span>
+                        Còn trống
+                    </span>
+
+                    <strong id="available">
+                        2
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- SƠ ĐỒ BÃI XE -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <h2>
+                    Trạng thái bãi xe
+                </h2>
+
+                <span class="live">
+                    ● LIVE
+                </span>
+
+            </div>
+
+
+            <div class="parking-grid">
+
+
+                <!-- A1 -->
+
+                <div class="slot occupied"
+                     id="slot-A1">
+
+                    <div class="slot-top">
+
+                        <h3>A1</h3>
+
+                        <span class="slot-number">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <div class="car">
+                        🚗
+                    </div>
+
+
+                    <span class="status">
+                        🔴 Đang đỗ
+                    </span>
+
+
+                    <p class="plate">
+
+                        Biển số:
+
+                        <strong id="plate-A1">
+                            29A-123.45
+                        </strong>
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- A2 -->
+
+                <div class="slot occupied"
+                     id="slot-A2">
+
+                    <div class="slot-top">
+
+                        <h3>A2</h3>
+
+                        <span class="slot-number">
+                            02
+                        </span>
+
+                    </div>
+
+
+                    <div class="car">
+                        🚗
+                    </div>
+
+
+                    <span class="status">
+                        🔴 Đang đỗ
+                    </span>
+
+
+                    <p class="plate">
+
+                        Biển số:
+
+                        <strong id="plate-A2">
+                            30K-567.89
+                        </strong>
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- A3 -->
+
+                <div class="slot available"
+                     id="slot-A3">
+
+                    <div class="slot-top">
+
+                        <h3>A3</h3>
+
+                        <span class="slot-number">
+                            03
+                        </span>
+
+                    </div>
+
+
+                    <div class="car empty-car">
+                        🅿️
+                    </div>
+
+
+                    <span class="status">
+                        🟢 Trống
+                    </span>
+
+
+                    <p class="plate">
+
+                        Biển số:
+
+                        <strong id="plate-A3">
+                            ---
+                        </strong>
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- A4 -->
+
+                <div class="slot available"
+                     id="slot-A4">
+
+                    <div class="slot-top">
+
+                        <h3>A4</h3>
+
+                        <span class="slot-number">
+                            04
+                        </span>
+
+                    </div>
+
+
+                    <div class="car empty-car">
+                        🅿️
+                    </div>
+
+
+                    <span class="status">
+                        🟢 Trống
+                    </span>
+
+
+                    <p class="plate">
+
+                        Biển số:
+
+                        <strong id="plate-A4">
+                            ---
+                        </strong>
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+
+    <!-- =========================
+         XE TRONG BÃI
+    ========================== -->
+
+    <section id="vehicles"
+             class="page">
+
+
+        <div class="page-header">
+
+            <div>
+
+                <h1>Xe trong bãi</h1>
+
+                <p>
+                    Danh sách các xe hiện đang đỗ
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <h2>
+                    Xe đang đỗ
+                </h2>
+
+                <span class="count-label"
+                      id="vehicleCount">
+                    0 xe
+                </span>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Biển số
+                            </th>
+
+                            <th>
+                                Vị trí
+                            </th>
+
+                            <th>
+                                Thời gian vào
+                            </th>
+
+                            <th>
+                                Trạng thái
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="vehiclesTable">
+
+                        <tr>
+
+                            <td colspan="4"
+                                class="empty-message">
+
+                                Chưa có xe trong bãi
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+
+    <!-- =========================
+         LỊCH SỬ & THỐNG KÊ
+    ========================== -->
+
+    <section id="history"
+             class="page">
+
+
+        <div class="page-header">
+
+            <div>
+
+                <h1>
+                    Lịch sử & thống kê
+                </h1>
+
+                <p>
+                    Theo dõi hoạt động của bãi xe
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- THỐNG KÊ -->
+
+        <section class="statistics">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📊
+                </div>
+
+                <div>
+
+                    <span>
+                        Tổng lượt xe
+                    </span>
+
+                    <strong id="totalTrips">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🚗
+                </div>
+
+                <div>
+
+                    <span>
+                        Xe đang đỗ
+                    </span>
+
+                    <strong id="historyOccupied">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ⏱️
+                </div>
+
+                <div>
+
+                    <span>
+                        Thời gian đỗ TB
+                    </span>
+
+                    <strong id="averageTime">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- LỊCH SỬ -->
+
+        <section class="section">
+
+
+            <div class="section-title">
+
+                <h2>
+                    Lịch sử xe
+                </h2>
+
+
+                <input
+                    type="text"
+                    id="searchPlate"
+                    placeholder="🔍 Tìm biển số..."
+                >
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Biển số
+                            </th>
+
+                            <th>
+                                Vị trí
+                            </th>
+
+                            <th>
+                                Xe vào
+                            </th>
+
+                            <th>
+                                Xe ra
+                            </th>
+
+                            <th>
+                                Ảnh
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="historyTable">
+
+                        <tr>
+
+                            <td colspan="5"
+                                class="empty-message">
+
+                                Chưa có lịch sử
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script type="module"
+        src="app.js">
+</script>
+
+
+<script>
+
+    /* =========================
+       CHUYỂN TRANG
+    ========================== */
+
+    const menuItems =
+        document.querySelectorAll(
+            ".menu-item"
+        );
+
+
+    const pages =
+        document.querySelectorAll(
+            ".page"
+        );
+
+
+    menuItems.forEach(item => {
+
+        item.addEventListener(
+            "click",
+            () => {
+
+                const pageId =
+                    item.dataset.page;
+
+
+                /* menu */
+
+                menuItems.forEach(menu => {
+
+                    menu.classList.remove(
+                        "active"
+                    );
+
+                });
+
+
+                item.classList.add(
+                    "active"
+                );
+
+
+                /* page */
+
+                pages.forEach(page => {
+
+                    page.classList.remove(
+                        "active-page"
+                    );
+
+                });
+
+
+                document
+                    .getElementById(pageId)
+                    .classList.add(
+                        "active-page"
+                    );
+
+            }
+        );
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
